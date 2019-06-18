@@ -1,0 +1,25 @@
+.ActionButton {
+    background-color: white;
+    width:250px;
+    height:150px;
+    border-radius: 15px;
+    margin:15px;
+    font-weight: 900;
+}
+
+@media screen and (min-width: 1000px) {
+    .ActionButton {
+        background-color: white;
+        width:20%;
+        height:150px;
+        border-radius: 15px;
+        margin:15px;
+        font-weight: 900;
+    }
+}
+
+
+.ActionButton:hover { 
+    background-color: #39b24b;
+    color: white;
+}

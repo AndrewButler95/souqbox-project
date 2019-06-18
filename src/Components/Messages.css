@@ -1,0 +1,48 @@
+.MessagesSeperateHeaders{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.Messages{
+    width:100%;
+}
+
+@media screen and (min-width: 1000px) {
+.Messages{
+    padding:25px;
+    width: 45%;
+}
+}
+
+.ContentBox{
+    background-color: white;
+    height:250px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.newMessage{
+    background-color: #e0f2e4;
+    border-radius: 25px;
+    padding: 5px;
+    margin:15px;
+    text-align: center;
+    width:80%;
+
+}
+
+.close {
+    cursor: pointer;
+    position: relative;
+   
+    left: 39%;
+    padding: 12px 16px;
+  }
+
+ul{ 
+    list-style-type:none;
+}

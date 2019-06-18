@@ -1,0 +1,51 @@
+.OrdersSeperateHeaders{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.Orders{
+    width:100%;
+}
+
+@media screen and (min-width: 1000px) {
+.Orders{
+    padding:25px;
+    width: 45%;
+}
+
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+  }
+.tablediv{
+    width:100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    height:100%;
+}
+
+  ::-webkit-scrollbar {
+    height: 8px;
+    width:8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #b9b9b98e; 
+    
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #39b24b; 
+    border-radius:5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #39b24b; 
+  }

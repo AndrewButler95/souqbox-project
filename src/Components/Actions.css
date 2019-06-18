@@ -1,0 +1,21 @@
+.Actions {display: flex; /* or inline-flex */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width:100%;
+}
+
+@media screen and (min-width: 1000px) {
+.Actions {display: flex; /* or inline-flex */
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    width:100%;
+}
+}
+
+
+.ActionsHeader {
+    text-align: left;
+    padding:25px;
+}
