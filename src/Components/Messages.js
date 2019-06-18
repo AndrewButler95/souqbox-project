@@ -48,7 +48,7 @@ class Messages extends Component {
     }
     else {
         return (<div className="Messages">
-            <div className="MessagesSeperateHeaders"><div>Messages</div><div>View All</div></div>
+            <div className="MessagesSeperateHeaders"><div>Messages</div><div className="colourHeaderText">View All</div></div>
             <div className="ContentBox">
                 <ul>
                     {list}
