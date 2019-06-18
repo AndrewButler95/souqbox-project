@@ -13,6 +13,10 @@ class App extends Component {
     this.getTradedGoodsData = this.getTradedGoodsData.bind(this);
   }
 
+  componentDidMount(){
+    this.getTradedGoodsData();
+  }
+
   getTradedGoodsData() {
     axios.get('https://reqres.in/api/users?page=2')
       .then(function (response) {

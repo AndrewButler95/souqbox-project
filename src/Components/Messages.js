@@ -36,7 +36,7 @@ class Messages extends Component {
         }
         if(this.state.isClicked === false){
         return (<div className="Messages">
-            <div className="MessagesSeperateHeaders"><div>Messages</div><div>View All</div></div>
+            <div className="MessagesSeperateHeaders"><div>Messages</div><div className="colourHeaderText">View All</div></div>
             <div className="ContentBox">
                 <div className="newMessage">{listMessage}<span onClick={this.removeMessage} className="close">&times;</span></div>
                 <ul>

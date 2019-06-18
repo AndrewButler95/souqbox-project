@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import './Orders.css';
 
 class Orders extends Component {
-    constructor(props) {
-        super(props);        
-    }    
-
     render() {
         let rows = <tr></tr>
         if(this.props.data !== undefined){
@@ -22,7 +18,7 @@ class Orders extends Component {
         })
     }
         return (<div className="Orders">
-            <div className="OrdersSeperateHeaders"><div>Orders</div><div>View All</div></div>
+            <div className="OrdersSeperateHeaders"><div>Orders</div><div className="colourHeaderText">View All</div></div>
             <div className="ContentBox">
                 <div className="tablediv">
                 <table>
