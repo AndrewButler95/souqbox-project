@@ -21,16 +21,16 @@ class Messages extends Component {
 
     removeMessage(){
         return this.setState({isClicked:!this.isClicked});
-    }
+    }    
 
     render() {
         let list = [];
         let listMessage = "1 new message";
-        if (this.state.data != undefined) {
-            list = this.state.data.map(function (data) {
-                return <li>{data.id} {data.name} {data.year}</li>
+        if (this.state.data !== undefined) {
+            list = this.state.data.map(function (data, index) {
+                return <li key={index}>{data.id} {data.name} {data.year}</li>
             })
-            if (list.length != 1) {
+            if (list.length !== 1) {
                 listMessage = list.length + " new messages";
             }
         }

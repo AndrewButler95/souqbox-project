@@ -22,4 +22,5 @@
 .ActionButton:hover { 
     background-color: #39b24b;
     color: white;
+    cursor: pointer;
 }

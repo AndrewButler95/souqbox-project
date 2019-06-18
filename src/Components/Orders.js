@@ -1,27 +1,15 @@
 import React, { Component } from 'react';
 import './Orders.css';
-import axios from 'axios';
 
 class Orders extends Component {
     constructor(props) {
-        super(props);
-        this.state = {};
-    }
-
-    componentDidMount() {
-        axios.get('https://reqres.in/api/users?page=2')
-        .then(function (response) {
-            this.setState({
-                data: response.data.data
-            })
-          }.bind(this))
-        
-    }
+        super(props);        
+    }    
 
     render() {
         let rows = <tr></tr>
-        if(this.state.data != undefined){
-        rows = this.state.data.map(function(data){
+        if(this.props.data !== undefined){
+        rows = this.props.data.map(function(data){
             return <tr>
                 <th>{data.id}</th>
                 <th>{data.email}</th>

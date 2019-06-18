@@ -1,31 +1,45 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import axios from 'axios';
 import './App.css';
+import './Components/Actions.css';
 import Orders from './Components/Orders';
-import Actions from './Components/Actions';
 import Messages from './Components/Messages';
+import ActionButton from './Components/ActionButton.js';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {action:"none"};
-    this.updateSelection = this.updateSelection.bind(this);
+    this.state = { action: "none", data: [] };    
+    this.getTradedGoodsData = this.getTradedGoodsData.bind(this);
   }
 
-  updateSelection(asdf){
-    this.setState({action:asdf})
-    }
-
-render(){
+  getTradedGoodsData() {
+    axios.get('https://reqres.in/api/users?page=2')
+      .then(function (response) {
+        this.setState({
+          data: response.data.data
+        })
+      }.bind(this))
+  }
   
-  return (
-    <div className="App">
-      <Actions updateSelection={this.updateSelection} ></Actions>
-      <div className="AppAlignContent">
-      <Orders action={this.state.action}></Orders>
-      <Messages></Messages>
+  render() {
+    return (
+      <div className="App">
+        <div className="ActionsHeader">Actions</div>
+        <div className="Actions">
+          <ActionButton name="Traded Goods" onClickAction={this.getTradedGoodsData}></ActionButton>
+          <ActionButton name="Raw Materials" onClickAction={this.getTradedGoodsData}></ActionButton>
+          <ActionButton name="Sundry Items" onClickAction={this.getTradedGoodsData}></ActionButton>
+          <ActionButton name="Stock Check" onClickAction={this.getTradedGoodsData}></ActionButton>
+          <ActionButton name="Logistics Manager" onClickAction={this.getTradedGoodsData}></ActionButton>
+        </div>
+        <div className="AppAlignContent">
+          <Orders data={this.state.data}></Orders>
+          <Messages></Messages>
+        </div>
       </div>
-    </div>
-  );
-}}
+    );
+  }
+}
 
 export default App;
